@@ -1,0 +1,33 @@
+{
+  "name": "npm-project",
+  "version": "0.0.1",
+  "description": "Mi primer proyecton NPM",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass -o dist/css src/scss --output-style compressed --source-map-embed",
+    "watch:css": "onchange src/scss/*.scss -- npm run css",
+    "serve": "browser-sync start --server dist --files dist",
+    "dev": "parallelshell 'npm run watch:css' 'npm run serve'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davecarter/npm-project.git"
+  },
+  "keywords": [
+    "npm",
+    "boilerplate",
+    "frontend"
+  ],
+  "author": "David G",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davecarter/npm-project/issues"
+  },
+  "homepage": "https://github.com/davecarter/npm-project#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "node-sass": "^3.4.2",
+    "onchange": "^2.2.0",
+    "parallelshell": "^2.0.0"
+  }
+}
