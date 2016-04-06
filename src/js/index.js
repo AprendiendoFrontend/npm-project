@@ -1,4 +1,3 @@
-import math from 'modules/math';
+const changeColor = () => { document.querySelector('.header').addEventListener('click',() => document.body.classList.add('backgnd'))};
 
-[1,2,3].map(n => n + 1);
-console.log(math.sqr(8));
+changeColor()

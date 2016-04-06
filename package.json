@@ -4,11 +4,15 @@
   "description": "Mi primer proyecton NPM",
   "main": "index.js",
   "scripts": {
+
     "css": "node-sass -o dist/css src/scss --output-style compressed --source-map-embed",
     "watch:css": "onchange src/scss/*.scss -- npm run css",
+
     "js": "babel src/js --out-dir dist/js",
+    "watch:js": "onchange src/js/*.js -- npm run js",
+
     "serve": "browser-sync start --server dist --files dist",
-    "dev": "parallelshell 'npm run watch:css' 'npm run serve'"
+    "dev": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run serve'"
   },
   "repository": {
     "type": "git",
