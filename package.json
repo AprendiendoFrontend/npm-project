@@ -1,7 +1,7 @@
 {
   "name": "npm-project",
   "version": "0.0.1",
-  "description": "Mi primer proyecton NPM",
+  "description": "Mi primer proyecto NPM",
   "main": "index.js",
   "scripts": {
     "css": "node-sass -o dist/css src/scss --output-style compressed --source-map-embed",
