@@ -1,7 +1,13 @@
 body {
   background-color: red;
 
-  h1 {
-    color: aliceblue;
-  }
+}
+
+h1 {
+  display: flex;
+}
+
+.backgnd {
+  background-color: yellow;
+  color: red;
 }
