@@ -1,9 +1,11 @@
-'use strict';
+"use strict";
 
-var changeColor = function changeColor() {
-  document.querySelector('.header').addEventListener('click', function () {
-    return document.body.classList.add('backgnd');
-  });
+var Person = function Person(name) {
+  this.name = name;
+  this.channel = function (channel) {
+    return "Hola soy " + name + "!, y esto es " + channel;
+  };
 };
 
-changeColor();
+var David = new Person('David');
+console.log(David.channel('Aprendiendo Frontend'));

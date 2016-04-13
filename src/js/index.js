@@ -1,3 +1,8 @@
-const changeColor = () => {document.querySelector('.header').addEventListener('click', () => document.body.classList.add('backgnd'))};
+var Person = function(name){
+  this.name = name;
+  this.channel = function(channel){
+    return 'Hola soy ' + name + '!, y esto es' + channel;
+  };
+};
 
-changeColor();
+const David = new Person('David');
