@@ -4,16 +4,16 @@
   "description": "Mi primer proyecto NPM",
   "main": "index.js",
   "scripts": {
-
     "css": "node-sass -o dist/css src/scss --output-style compressed --source-map-embed",
     "autoprefixer": "postcss -u autoprefixer --autoprefixer.browsers '> 5%, ie 9' -r dist/css/*",
     "build:css": "npm run css && npm run autoprefixer",
     "js": "babel src/js --out-dir dist/js",
-
     "watch:css": "onchange src/scss/*.scss -- npm run build:css",
     "watch:js": "onchange src/js/*.js -- npm run js",
     "serve": "browser-sync start --server dist --files dist",
-    "dev": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run serve'"
+    "dev": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run serve'",
+
+    "lint:sass": "sass-lint src/**/*.scss -c -v"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "node-sass": "^3.4.2",
     "onchange": "^2.2.0",
     "parallelshell": "^2.0.0",
-    "postcss-cli": "^2.5.1"
+    "postcss-cli": "^2.5.1",
+    "sass-lint": "^1.5.1"
   }
 }
