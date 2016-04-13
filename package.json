@@ -14,8 +14,10 @@
     "dev": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run serve'",
     "lint:sass": "sass-lint src/**/*.scss -c -v",
     "lint:js": "eslint src/js/**/*.js",
-    "lint": "npm run lint:sass && npm run lint:js"
+    "lint": "npm run lint:sass && npm run lint:js",
+    "validate": "npm ls"
   },
+  "pre-commit":["lint"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/davecarter/npm-project.git"
@@ -42,6 +44,12 @@
     "onchange": "^2.2.0",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.5.1",
+    "precommit-hook": "^3.0.0",
     "sass-lint": "^1.5.1"
-  }
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }
