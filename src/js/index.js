@@ -1,8 +1,12 @@
-var Person = function(name){
-  this.name = name;
-  this.channel = function(channel){
-    return 'Hola soy ' + name + '!, y esto es' + channel;
-  };
-};
+/*eslint no-console: 0*/
+export const numberList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-const David = new Person('David');
+export const printNumberList = function(num){
+  var listOfNumbers = [];
+  for (var n = 1; n <= num; n++) {
+    listOfNumbers.push(n);
+    console.log(n);
+  }
+
+  return listOfNumbers;
+};
