@@ -1,26 +1,26 @@
 /*eslint no-console: 0*/
 
-export const fizz = (fizzNum) => {
-  if (fizzNum % 3 === 0) {
+export const fizz = (number) => {
+  if (number % 3 === 0) {
     return 'FIZZ';
   }
+  return number;
 };
 
-export const buzz = (buzzNum) => {
-  if (buzzNum % 5 === 0) {
+export const buzz = (number) => {
+  if (number % 5 === 0) {
     return 'BUZZ';
   }
+  return number;
 };
 
-export const list = (listNum) => {
-  let listOfNums = [];
-  for(var n = 1; n <= listNum; n++) {
-    listOfNums.push(n);
+export const fizzBuzz = (number) => {
+  let isFizz = fizz(number) === 'FIZZ';
+  let isBuzz = buzz(number) === 'BUZZ';
+
+  if(isFizz && isBuzz){
+    return 'FIZZ BUZZ';
   }
-  console.log(listOfNums);
-  return listOfNums;
-};
 
-export const listFizz = (insertFizz) => {
-  return [1,2,'FIZZ',4,5,'FIZZ',7,8,'FIZZ',10,11,'FIZZ'];
+  return number;
 };
