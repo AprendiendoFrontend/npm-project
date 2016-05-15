@@ -1,26 +1,27 @@
-/*eslint no-console: 0*/
+// these fns are in reality just
+// isDivisibleBy3 and isDivisibleBy5
+// and they are implementation details
+// we don't need to export them
+// we should test the public api only,
+// the public api is the fn fizzBuzz
+const isFizz = number => number % 3 === 0;
+const isBuzz = number => number % 5 === 0;
 
-export const fizz = (number) => {
-  if (number % 3 === 0) {
-    return 'FIZZ';
-  }
-  return number;
-};
-
-export const buzz = (number) => {
-  if (number % 5 === 0) {
-    return 'BUZZ';
-  }
-  return number;
-};
-
-export const fizzBuzz = (number) => {
-  let isFizz = fizz(number) === 'FIZZ';
-  let isBuzz = buzz(number) === 'BUZZ';
-
-  if(isFizz && isBuzz){
+export const fizzBuzz = number => {
+  // now we do not need the flags
+  // and we don't compare with the strings FIZZ nor BUZZ
+  if (isFizz(number) && isBuzz(number)) {
     return 'FIZZ BUZZ';
   }
 
-  return number;
+  if (isFizz(number)) {
+    return 'FIZZ';
+  }
+
+  if (isBuzz(number)) {
+    return 'BUZZ';
+  }
+
+  // now we only need to return the number one time
+  return number.toString();
 };
