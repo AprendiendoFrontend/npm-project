@@ -16,7 +16,6 @@
     "lint:sass": "sass-lint src/**/*.scss -c -v",
     "lint:js": "eslint src/js/**/*.js",
     "lint": "npm run lint:sass && npm run lint:js",
-
     "test": "mocha --compilers js:babel-register",
     "test:watch": "mocha --compilers js:babel-register --watch"
   },
@@ -48,6 +47,7 @@
     "browser-sync": "^2.11.2",
     "chai": "^3.5.0",
     "eslint": "^2.7.0",
+    "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "onchange": "^2.2.0",
     "parallelshell": "^2.0.0",
