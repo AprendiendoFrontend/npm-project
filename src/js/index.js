@@ -1,5 +1,3 @@
-/*eslint no-console: 0*/
-
 export const fizz = (number) => {
   if (number % 3 === 0) {
     return 'FIZZ';
@@ -20,6 +18,14 @@ export const fizzBuzz = (number) => {
 
   if(isFizz && isBuzz){
     return 'FIZZ BUZZ';
+  }
+
+  if (isFizz) {
+    return 'FIZZ';
+  }
+
+  if (isBuzz) {
+    return 'BUZZ';
   }
 
   return number;

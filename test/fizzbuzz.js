@@ -19,7 +19,10 @@ describe('Fizz Buzz Kata', () => {
   });
 
   it('Shoul return FIZZ BUZZ if provided number is divisible by 3 and 5', () => {
+    expect(fizzBuzz(15)).to.eql('FIZZ BUZZ');
     expect(fizzBuzz(30)).to.eql('FIZZ BUZZ');
     expect(fizzBuzz(31)).to.not.eql('FIZZ BUZZ');
+    expect(fizzBuzz(6)).to.eql('FIZZ');
+    expect(fizzBuzz(10)).to.eql('BUZZ');
   });
 });
