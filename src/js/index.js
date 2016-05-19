@@ -1,3 +1,5 @@
+/*eslint no-console: 0*/
+
 export const fizz = (number) => {
   if (number % 3 === 0) {
     return 'FIZZ';
