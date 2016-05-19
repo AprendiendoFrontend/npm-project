@@ -1,34 +1,18 @@
-/*eslint no-console: 0*/
+export const isFizz = (num) => num % 3 === 0;
+export const isBuzz = (num) => num % 5 === 0;
 
-export const fizz = (number) => {
-  if (number % 3 === 0) {
-    return 'FIZZ';
-  }
-  return number;
-};
-
-export const buzz = (number) => {
-  if (number % 5 === 0) {
-    return 'BUZZ';
-  }
-  return number;
-};
-
-export const fizzBuzz = (number) => {
-  let isFizz = fizz(number) === 'FIZZ';
-  let isBuzz = buzz(number) === 'BUZZ';
-
-  if(isFizz && isBuzz){
-    return 'FIZZ BUZZ';
+export const fizzbuzz = (num) => {
+  if(isFizz(num) && isBuzz(num)){
+      return 'FIZZBUZZ';
   }
 
-  if (isFizz) {
+  if(isFizz(num)){
     return 'FIZZ';
   }
 
-  if (isBuzz) {
+  if(isBuzz(num)){
     return 'BUZZ';
   }
 
-  return number;
+  return num.toString();
 };
