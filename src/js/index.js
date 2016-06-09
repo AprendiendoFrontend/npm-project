@@ -1,8 +1,18 @@
-var Person = function(name){
-  this.name = name;
-  this.channel = function(channel){
-    return 'Hola soy ' + name + '!, y esto es' + channel;
-  };
-};
+export const isFizz = (num) => num % 3 === 0;
+export const isBuzz = (num) => num % 5 === 0;
 
-const David = new Person('David');
+export const fizzbuzz = (num) => {
+  if(isFizz(num) && isBuzz(num)){
+      return 'FIZZBUZZ';
+  }
+
+  if(isFizz(num)){
+    return 'FIZZ';
+  }
+
+  if(isBuzz(num)){
+    return 'BUZZ';
+  }
+
+  return num.toString();
+};
