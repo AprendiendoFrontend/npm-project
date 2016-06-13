@@ -20,8 +20,7 @@
     "test:watch": "mocha --compilers js:babel-register --watch"
   },
   "pre-commit": [
-    "lint",
-    "test"
+    "lint"
   ],
   "repository": {
     "type": "git",
