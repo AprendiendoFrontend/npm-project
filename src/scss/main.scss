@@ -1,14 +1,32 @@
 body {
+  background-color: #ffee00;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   padding: 5em;
   text-align: center;
+}
 
-  h1 {
-    font-weight: bold;
+button {
+  -webkit-appearance: none;
+  background: #6495ed;
+  border: 6px solid #4472c5;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 2em;
+  margin: 0 auto 2em;
+  outline: 7px;
+  padding: 1em;
+
+  &:hover {
+    background: #395890;
   }
 }
 
-.backgnd {
-  background-color: #ffee00;
+img {
+  display: none;
+}
+
+.showCat {
+  display: inline-block;
 }
